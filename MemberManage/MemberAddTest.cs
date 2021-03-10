@@ -138,8 +138,6 @@ namespace CTLtest.MemberManage
             warringstring =  driver.FindElement(By.CssSelector("#MemberManage > div:nth-child(7) > div > div.el-dialog__body > form > div.el-form-item.el-form-item--feedback.is-error.is-required.el-form-item--small > div > div.el-form-item__error"))
                                                  .GetAttribute("innerText");
 
-            //test123
-            //test456
             
             switch (option) {
                 case "未輸入":
