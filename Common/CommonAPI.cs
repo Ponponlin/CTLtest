@@ -27,12 +27,19 @@ namespace CTLtest.Common
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
+        //將input欄位值清空
         public void DeleteInput(IWebElement input)
         {
             while (input.GetAttribute("value").Length > 0)
             {
                 input.SendKeys(Keys.Backspace);
             }
+        }
+
+        //將input欄位設為空值
+        public void SetInputValueZero(IWebDriver driver, IWebElement input)
+        {
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value = '';", input);
         }
     }
 }
